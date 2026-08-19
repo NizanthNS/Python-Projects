@@ -2,7 +2,7 @@
 
 while True:
     try:
-        n = int(input("Enter the Number of Fibonacci Series: "))
+        n = int(input("Enter the number of terms for Fibonacci series: "))
         if n > 0:
             break
         else:
