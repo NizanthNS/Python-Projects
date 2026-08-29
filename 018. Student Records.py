@@ -27,7 +27,7 @@ def get_student_details():
 
     return student
 
-def display_students(students, avg_age, total_student):
+def display_students(students, avg_age, total_student, oldest_age, oldest_name, youngest_age, youngest_name):
 
     print()
     print("+--------------------------------------------------+")
@@ -41,6 +41,10 @@ def display_students(students, avg_age, total_student):
         print("+--------------------------------------------------+")
     print(f"| Average Age    : {avg_age:<32.2f}|")
     print(f"| Total Students : {total_student:<32}|")
+    print(f"| Youngest S Age : {youngest_age:<32}|")
+    print(f"| Youngest S Name: {youngest_name:<32}|")
+    print(f"| Oldest S Age   : {oldest_age:<32}|")
+    print(f"| Oldest S Name  : {oldest_name:<32}|")
     print("+--------------------------------------------------+")
 
 def average_age(students):
@@ -61,6 +65,24 @@ def total_students(students):
 
     return total_student
 
+def category(students):
+    oldest_age = students[0]['Age']
+    oldest_name = students[0]['Name']
+    youngest_age = students[0]['Age']
+    youngest_name = students[0]['Name']
+
+    for student in students:
+        if student['Age'] > oldest_age:
+            oldest_age = student['Age']
+            oldest_name = student['Name']
+
+    for student in students:
+        if student['Age'] < youngest_age:
+            youngest_age = student['Age']
+            youngest_name = student['Name']
+
+    return oldest_age, oldest_name, youngest_age, youngest_name
+
 def main():
 
     students = []
@@ -78,7 +100,9 @@ def main():
 
     total_student = total_students(students)
 
-    display_students(students, avg_age, total_student)
+    oldest_age, oldest_name, youngest_age, youngest_name = category(students)
+
+    display_students(students, avg_age, total_student, oldest_age, oldest_name, youngest_age, youngest_name)
 
 if __name__ == "__main__":
     main()
