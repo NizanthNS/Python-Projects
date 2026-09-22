@@ -133,7 +133,7 @@ def main():
     is_running = True
 
     print("╔══════════════════════════════════════╗")
-    print("║             🎮 HANGMAN 🎮            ║")
+    print("║               HANGMAN                ║")
     print("╚══════════════════════════════════════╝")
     print()
 
@@ -176,7 +176,7 @@ def main():
 
             print()
             print("╔══════════════════════════════════════╗")
-            print("║             🎉 YOU WIN! 🎉           ║")
+            print("║               YOU WIN!               ║")
             print("╚══════════════════════════════════════╝")
             print()
             print("        ⭐ CONGRATULATIONS! ⭐")
@@ -192,7 +192,7 @@ def main():
 
             print()
             print("╔══════════════════════════════════════╗")
-            print("║            💀 GAME OVER 💀           ║")
+            print("║               GAME OVER              ║")
             print("╚══════════════════════════════════════╝")
             print()
             print("        Better luck next time! 😄")
