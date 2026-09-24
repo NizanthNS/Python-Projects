@@ -46,10 +46,6 @@ for num in numbers:
         odd_count += 1
 
 print()
-print("╔══════════════════════════════════════╗")
-print("║            NUMBER ANALYZER           ║")
-print("╚══════════════════════════════════════╝")
-print()
 print("         ANALYSIS RESULTS")
 print("----------------------------------------")
 print(f"        Total        : {total}")
