@@ -2,17 +2,26 @@
 
 numbers = []
 
-for i in range(0, 21):
+for i in range(6, 10):
     numbers.append(i)
 
-target = 15
+while True:
+    try:
+        target = int(input("Enter the number to Search: "))
+        break
+
+    except ValueError:
+        print("INVALI INPUT")
+
 found = False
+
+
 
 for index in range(len(numbers)):
     if target == numbers[index]:
-        print(f"The number {target} was found at index {index}.")
+        print(f"The number {target} found at the Index {index}")
         found = True
         break
 
 if not found:
-    print(f"The number {target} was not found in the list.")
+    print(f"The number {target} not found")
